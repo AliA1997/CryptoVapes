@@ -8,17 +8,22 @@ import { JwtModule } from '@nestjs/jwt';
 import { secret } from './utils/constants';
 import { join } from 'path/posix';
 import { User, UserSchema } from './model/user.schema';
+import { WalletType, WalletTypeSchema } from './model/walletType.schema';
 import { Wallet, WalletSchema } from './model/wallet.schema';
+import { Flavor, FlavorSchema } from './model/flavor.schema';
+import { Vape, VapeSchema } from './model/vape.schema';
 import { WalletController } from './controller/wallet.controller';
 import { UserController } from './controller/user.controller';
 import { isAuthenticated } from './app.middleware';
+import { ConfigModule } from '@nestjs/config';
 
 //Let nestjs know that the wallets and users exits
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     JwtModule.register({
       secret: secret,
-      signOptions: { expiresIn: '2h' },
+      signOptions: { expiresIn: '8h' },
     }),
     MongooseModule.forFeature([
       {
@@ -28,8 +33,26 @@ import { isAuthenticated } from './app.middleware';
     ]),
     MongooseModule.forFeature([
       {
+        name: WalletType.name,
+        schema: WalletTypeSchema,
+      },
+    ]),
+    MongooseModule.forFeature([
+      {
         name: Wallet.name,
         schema: WalletSchema,
+      },
+    ]),
+    MongooseModule.forFeature([
+      {
+        name: Flavor.name,
+        schema: FlavorSchema,
+      },
+    ]),
+    MongooseModule.forFeature([
+      {
+        name: Vape.name,
+        schema: VapeSchema,
       },
     ]),
     ServeStaticModule.forRoot({
