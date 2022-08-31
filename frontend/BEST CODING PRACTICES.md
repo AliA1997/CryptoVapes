@@ -1,8 +1,12 @@
 # Coding Practices for this project.
 
+## Starting a task.
+* Stash all current changes by (git stash save 'Message describing what you are stashing in one sentence.')
+* Create a new branch that will give some minor indicator of what you are building. (git checkout -b 'what you are building')
+
 ## Creating new files
 * All images are under the assets folder.
-* DO NOT CREATE TOO MANY JSX files, if there is a component that uses multiple small components. Have them in one file. This WILL NOT HAPPEN OFTEN. This will prevent a unnecessary complex folder structure.
+* DO NOT CREATE TOO MANY JS files, if there is a component that uses multiple small components. Have them in one file. This WILL NOT HAPPEN OFTEN. This will prevent a unnecessary complex folder structure.
 
 ## eslint
 * Make sure to follow the linter for clean code.
@@ -28,6 +32,7 @@
 * Mobile first, make sure styles look good on mobile.
 * Reuse classes
 * For sass import all sass files in the index.sass.
+* Try to use vw, vh or % for you width's and height. For example 100% instead of 640px.
 
 ## Redux
 * It should hold global state, but not all state. 
