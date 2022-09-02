@@ -22,6 +22,9 @@
 * EACH GROUP IS SEPERATED BY A SPACE.
 
 ## HTML or JSX
+* For creating pages use CryptoVapesRouteContainer.
+* For container use the appropiate container components found in the Containers file.
+* For text use appropiate text components found in the Typography file.
 * Make sure each div tag has it's purpose.
 * NEVER use dangerouslySetInnerHtml, this can cause cross-site scripting attacks. 
 * When displaying a list of items, make sure to use uuidv4() for the key instead of the index of the item. Due to cases when we are displaying two lists, there would be duplicate key which therefore defeats the purpose of the having the key to begin with.
@@ -33,6 +36,7 @@
 * Reuse classes
 * For sass import all sass files in the index.sass.
 * Try to use vw, vh or % for you width's and height. For example 100% instead of 640px.
+* (Optional) Use distinct background color temporarily when adjusting padding or margin of container.
 
 ## Redux
 * It should hold global state, but not all state. 

@@ -2,7 +2,7 @@ import React, { useReducer, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 // import { useNavigate} from "react-router-dom";
 // import userReducer from '../slices/userSlice';
-import { login, userReducer, changeuser } from "../../slices/userSlice";
+import { login, userReducer, changeuser } from "../../redux/slices/userSlice";
 // import LoginSt from "../styles/Login.module.css";
 // import "./Login.css";
 

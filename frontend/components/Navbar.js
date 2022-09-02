@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../assets/cvnavbar.svg";
 import NavItem from "./NavItem";
 import { useRouter } from "next/router";
@@ -9,81 +9,106 @@ import { useDispatch, useSelector } from "react-redux";
 // import Login from "./Login";
 import Logout from "./Logout";
 import Vapes from "./Vapes";
-import { userR } from "../slices/userSlice";
+import { userR } from "../redux/slices/userSlice";
 import LoginOne from "../pages/users/[id]";
-import { store } from "../slices";
-import { login, userReducer, selectUser } from "../slices/userSlice";
+import { store } from "../redux/slices";
+import { login, userReducer, selectUser } from "../redux/slices/userSlice";
+import { makeStyles } from "@material-ui/core/styles";
 
 const MENU_LIST = [
   //   { text: "Home", href: "/" },
-  { text: "Vapes", href: "/vapes" },
-  { text: "Accessories", href: "/accessories" },
-  { text: "Account", href: "/account" },
-  { text: "Register", href: "/register" },
-  { text: "Login", href: "/users/1" },
+  { name: "Vapes", Link: "/vapes" },
+  { name: "Accessories", Link: "/accessories" },
+  { name: "Account", Link: "/account" },
+  { name: "Register", Link: "/register" },
+  { name: "Login", Link: "/users/1" },
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
   const router = useRouter();
-
-  // const {username} = useSelector( state => this.state.);
-  const username = useSelector(state=> state.selectUser);
-  const dispatch = useDispatch()
-
+  const [windowDimension, setWindowDimension] = useState(null);
+  const [isOpen, setOpen] = useState(false);
+  // const classes = useStyles();
+  const [active, setActive] = useState(false);
+  // const toggleMenu = () => {
+  //   let dd = document.body;
+  //   dd.classList.toggle("nav__menu-bar");
+  //   setOpen(!isOpen);
+  // };
+  // useEffect(() => {
+  //   setWindowDimension(window.innerWidth);
+  // }, []);
+  // useEffect(() => {  
+  //   function handleResize() {
+  //     setWindowDimension(window.innerWidth);
+  //   }
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+  const isMobile = windowDimension <= 640;
+  const classes = {};
   const handleClick = () => {
     console.log("taking you to login");
     router.push("/users/1");
   };
-
+  //   const [navActive, setNavActive] = useState(null);
+  // const [activeIdx, setActiveIdx] = useState(-1);
   return (
-    <header>
-      <nav className={`nav`}>
-        <Link href={"/"}>
-          <div
-            style={{
-              position: "relative",
-              height: 76,
-              width: 432,
-              left: 100,
-              top: 13,
-              fontFamily: "Nunito",
-              fontStyle: 40,
-              fontWeight: 900,
-              fontSize: 40,
-              lineHeight: 55,
-              display: "flex",
-            }}
-          >
-            <Image src={Logo} />
-            {/* <h1 className="logo">CryptoVapes</h1> */}
-          </div>
-        </Link>
-
-        <div
-          onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
-        >
-          {username ? (<div>{username}</div>): <LoginOne /> }
-          {/* <div>{user1 ? <Logout /> : <Login /> }</div> */}
-          <div></div>
-          <div></div>
-        </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-          {MENU_LIST.map((menu, idx) => (
+    // <header>
+    //   <nav className={`nav`}>
+    //     <Link href={"/"}>
+    //       <a>
+    //         <h1 className="logo"><Image src={Logo} /></h1>
+    //       </a>
+    //     </Link>
+    //     <div
+    //       onClick={() => setNavActive(!navActive)}
+    //       className={`nav__menu-bar`}
+    //     >
+    //       <div></div>
+    //       <div></div>
+    //       <div></div>
+    //     </div>
+    //     <div className={`${navActive ? "active" : "closed"} nav__menu-list`}>
+    //       {MENU_LIST.map((menu, idx) => (
+    //         <div
+    //           onClick={() => {
+    //             setActiveIdx(idx);
+    //             setNavActive(false);
+    //           }}
+    //           key={menu.text}
+    //         >
+    //           <NavItem active={activeIdx === idx} {...menu} />
+    //         </div>
+    //       ))}
+    //     </div>
+    //   </nav>
+    // </header>
+    // isMobile ? return ()
+    <div className={classes.main}>
+      <div className={classes.container}>
+        <div className={classes.wrapper}>
+          <Image src={Logo} />
+          <div onClick={() => setActive(!active)}>
             <div
-              onClick={() => {
-                setActiveIdx(idx);
-                setNavActive(false);
-              }}
-              key={menu.text}
-            >
-              <NavItem active={activeIdx === idx} {...menu} />
-            </div>
-          ))}
+              className={active ? classes.activeHamburger : classes.hamburger}
+            />
+          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+      <div className={active ? classes.activeSidenav : classes.sidenav}>
+        <ul className={classes.ul}>
+          {MENU_LIST.map((item, i) => (
+            <li key={i}>
+              <a href="#" className={classes.a}>
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 
