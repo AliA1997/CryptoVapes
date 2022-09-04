@@ -10,7 +10,7 @@ import { CryptoVapesCurrencyText } from '../components/Typography';
 export default function Home() {
   return <CryptoVapesRouteContainer>
     <CryptoVapesCurrencyText>
-Test
+
     </CryptoVapesCurrencyText>
   </CryptoVapesRouteContainer>
 }
