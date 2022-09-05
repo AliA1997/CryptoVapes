@@ -56,17 +56,22 @@ const Navbar = () => {
     return (
         
         
-        <Flex>
+        <Flex pos="relative">
+        {/* <Flex> */}
                <NextImage
+               pos="sticky"
   src={Logo}
   width={180}
   height={180}
   objectPosition="absolute"
+  top="1rem"
   w="auto"
   h="auto"
   borderWidth={7}
   borderStyle="solid"
 /> 
+
+
          {/* <Image src={Logo} />  */}
          <Flex
                 pos="fixed"
@@ -85,7 +90,7 @@ const Navbar = () => {
          </div>
        </div>
        </div> */}
-                    <Flex>
+                    
                   
         <NextLink href="/vapes" passHref>
             <Button 
@@ -142,17 +147,21 @@ const Navbar = () => {
                 Login
             </Button>
         </NextLink>
-                    </Flex>
+                    
                 </Flex>
+                <Flex pos="relative">
         <Switch 
         pos="fixed"
-        top="1rem"
+        top="0.5"
+        bottom="2.0"
         right="1rem"
         color="blue"
         isChecked={isDark}
         onChange={toggleColorMode}
         />
         </Flex>
+        </Flex>
+        
         
         
        
