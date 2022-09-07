@@ -9,20 +9,30 @@ import { useDispatch, useSelector } from "react-redux";
 import NextImage from "next/image";
 // import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
-
 // import Login from "./Login";
 import Logout from "./Logout";
 import Vapes from "./Vapes";
-import { useColorMode, Switch, Flex, HamburgerIcon, CloseIcon, Button, createStylesContext, StylesProvider, useStyles, chakra, useChakra } from "@chakra-ui/react";
+import {
+  useColorMode,
+  Switch,
+  Flex,
+  HamburgerIcon,
+  CloseIcon,
+  Button,
+  createStylesContext,
+  StylesProvider,
+  useStyles,
+  chakra,
+  useChakra,
+} from "@chakra-ui/react";
 import { useState } from "react";
 
-import NextLink from "next/link"
+import NextLink from "next/link";
 import { userR } from "../redux/slices/userSlice";
 import LoginOne from "../pages/users/[id]";
 import { store } from "../redux/slices";
 import { login, userReducer, selectUser } from "../redux/slices/userSlice";
 // import { makeStyles } from "@material-ui/core/styles";
-
 
 const MENU_LIST = [
   //   { text: "Home", href: "/" },
@@ -38,42 +48,34 @@ const Navbar = () => {
   // const router = useRouter();
   // const [windowDimension, setWindowDimension] = useState(null);
   // const [isOpen, setOpen] = useState(false);
-  
+
   const [active, setActive] = useState(false);
 
-  
-  
-  const { colorMode, toggleColorMode} = useColorMode();
-    const isDark = colorMode === 'dark';
- 
-  const [display, changeDisplay] = useState('none')
-  
-    // const ProductImage = (NextImage, {
-    //     baseStyle: { maxH: 120, maxW: 120 },
-    //     shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
-    //   })
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === "dark";
 
-    return (
-        
-        
-        <Flex>
-               <NextImage
-  src={Logo}
-  width={180}
-  height={180}
-  objectPosition="absolute"
-  w="auto"
-  h="auto"
-  borderWidth={7}
-  borderStyle="solid"
-/> 
-         {/* <Image src={Logo} />  */}
-         <Flex
-                pos="fixed"
-                top="1rem"
-                right="1rem"
-                >
-                      {/* <div className={classes.main}>
+  const [display, changeDisplay] = useState("none");
+
+  // const ProductImage = (NextImage, {
+  //     baseStyle: { maxH: 120, maxW: 120 },
+  //     shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
+  //   })
+
+  return (
+    <Flex>
+      <NextImage
+        src={Logo}
+        width={180}
+        height={180}
+        objectPosition="absolute"
+        w="auto"
+        h="auto"
+        borderWidth={7}
+        borderStyle="solid"
+      />
+      {/* <Image src={Logo} />  */}
+      <Flex pos="fixed" top="1rem" right="1rem">
+        {/* <div className={classes.main}>
        <div className={classes.container}>
       <div className={classes.wrapper}>
            <Image src={Logo} />
@@ -85,78 +87,56 @@ const Navbar = () => {
          </div>
        </div>
        </div> */}
-                    <Flex>
-                  
-        <NextLink href="/vapes" passHref>
-            <Button 
-            as="a"
-            variant="ghost"
-            aria-label="Vapes"
-            my={5}
-            w="100%"
-            >
-                Vapes
+        <Flex>
+          <NextLink href="/vapes" passHref>
+            <Button as="a" variant="ghost" aria-label="Vapes" my={5} w="100%">
+              Vapes
             </Button>
-        </NextLink>
-        <NextLink href="/accessories" passHref>
-            <Button 
-            as="a"
-            variant="ghost"
-            aria-label="Accessories"
-            my={5}
-            w="100%"
+          </NextLink>
+          <NextLink href="/accessories" passHref>
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Accessories"
+              my={5}
+              w="100%"
             >
-            Accessories
+              Accessories
             </Button>
-        </NextLink>
-        <NextLink href="/account" passHref>
-            <Button 
-            as="a"
-            variant="ghost"
-            aria-label="Account"
-            my={5}
-            w="100%"
+          </NextLink>
+          <NextLink href="/account" passHref>
+            <Button as="a" variant="ghost" aria-label="Account" my={5} w="100%">
+              Account
+            </Button>
+          </NextLink>
+          <NextLink href="/register" passHref>
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Register"
+              my={5}
+              w="100%"
             >
-                Account
+              Register
             </Button>
-        </NextLink>
-        <NextLink href="/register" passHref>
-            <Button 
-            as="a"
-            variant="ghost"
-            aria-label="Register"
-            my={5}
-            w="100%"
-            >
-                Register
+          </NextLink>
+          <NextLink href="/users/1" passHref>
+            <Button as="a" variant="ghost" aria-label="Login" my={5} w="100%">
+              Login
             </Button>
-        </NextLink>
-        <NextLink href="/users/1" passHref>
-            <Button 
-            as="a"
-            variant="ghost"
-            aria-label="Login"
-            my={5}
-            w="100%"
-            >
-                Login
-            </Button>
-        </NextLink>
-                    </Flex>
-                </Flex>
-        <Switch 
+          </NextLink>
+        </Flex>
+      </Flex>
+      <Switch
         pos="fixed"
         top="1rem"
         right="1rem"
         color="blue"
         isChecked={isDark}
         onChange={toggleColorMode}
-        />
-        </Flex>
-        
-        
-       
-    )
+      />
+    </Flex>
+  );
   // );
 };
 
