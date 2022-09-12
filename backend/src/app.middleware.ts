@@ -7,7 +7,7 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { Request, Response, NextFunction } from 'express';
-import { UserService } from './service/user.service';
+import { UserService } from './user/user.service';
 interface UserRequest extends Request {
   user: any;
 }
@@ -26,7 +26,7 @@ export class isAuthenticated implements NestMiddleware {
       ) {
         const token = req.headers.authorization.split(' ');
         const decoded = await this.jwt.verify(token[0]);
-        const user = await this.userService.getOne(decoded.email);
+        const user = await this.userService.findOne(decoded.email);
         if (user) {
           req.user = user;
           next();
