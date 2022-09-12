@@ -16,7 +16,7 @@ services:
     ports:
       - "3306:33066"
     volumes:
-      - ./init.sql:/data/application/init.sql
+      - ./init.dev.sql:/data/application/init.sql
       - .dbdata:/var/lib/mysql
   backend:
     build:
