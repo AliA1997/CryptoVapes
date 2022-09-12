@@ -176,7 +176,7 @@ nav{
     box-sizing: border-box;
     width: 300px;
     height: 225px;
-    background-image: url("../assets/vapes.png");
+    /* background-image: url("../assets/vapes.png"); */
     border: 1px solid #000000;
     border-radius: 30px;
     margin: auto;

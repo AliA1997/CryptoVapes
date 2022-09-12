@@ -1,4 +1,4 @@
-import Vape from "../assets/vapes.png";
+// import Vape from "../assets/vapes.png";
 import Image from "next/image";
 
 

@@ -1,22 +1,58 @@
-import Vape from "../assets/vapes.png";
-import Image from "next/image";
+// import Vape from "../../assets/vapes.png";
+// import Image from "next/image";
+import NextImage from "next/image";
+import { Box, Image, Badge, Text, Stack, 
+    useColorMode, Button, Flex, Spacer } 
+    from "@chakra-ui/react";
 export default function VapeCard({ vape })  {
+
+
+    
+    const { colorMode, toggleColorMode} = useColorMode();
+    
+    
     return (
-        <section className="rectangle">
-            <img className="vape-rect" src={Vape} />
-            <img className="crypto-rect"/>
-            <div className="crypto-text"> 10</div>
-            {/* </div> */}
-            {/* <p> </p> */}
-            {/* <div className="vape-product">
-                Test Vape
-            </div> */}
-            <div className="vape-product">
-                Test Vape
-                </div>
-        </section>
+        <div className="app">
+            {/* <Button onClick={toggleColorMode} mt={5}>
+         Toggle { colorMode === "light" ? "Dark" : "Light"}
+      </Button> */}
+      <Box w="300px" rounded="20px" 
+            overflow="hidden" bg={ colorMode === "dark" ? "gray .700": "gray.200"} mt={10}>
+         <Image src="/vapes.png"
+                alt="Card Image" boxSize="200px">
+         </Image>
+         <Box p={5}>
+         <Stack align="center">
+            <Badge variant="solid" colorScheme="green" 
+               rounded="full" px={2}>
+          Hcow 6000 
+             </Badge>
+           </Stack>
+           <Stack align="center">
+             <Text as="h2" fontWeight="normal" my={2} >
+               Top Seller $$$
+             </Text>
+             <Text fontWeight="light">
+               A 6000 puff rechargeable Disposible that we have in 30 different flavors
+             </Text>
+           </Stack>
+           <Flex>  
+            <Spacer />
+            <Button variant="solid" 
+              colorScheme="green" size="sm">
+                Learn More
+            </Button>
+          </Flex>
+        </Box>
+      </Box>
+      </div>
     )
-    //     <div className="vape-product">
+
+    
+    }
+    
+    {/* //     <div className="vape-product">
     //     Test Vape
     // </div>
-}
+} */}
+

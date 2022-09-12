@@ -54,28 +54,32 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
 
-  const [display, changeDisplay] = useState("none");
+    return (
+        
+        
+        <Flex pos="relative">
+        {/* <Flex> */}
+               <NextImage
+               pos="sticky"
+  src={Logo}
+  width={180}
+  height={180}
+  objectPosition="absolute"
+  top="1rem"
+  w="auto"
+  h="auto"
+  borderWidth={7}
+  borderStyle="solid"
+/> 
 
-  // const ProductImage = (NextImage, {
-  //     baseStyle: { maxH: 120, maxW: 120 },
-  //     shouldForwardProp: (prop) => ['width', 'height', 'src', 'alt'].includes(prop),
-  //   })
 
-  return (
-    <Flex>
-      <NextImage
-        src={Logo}
-        width={180}
-        height={180}
-        objectPosition="absolute"
-        w="auto"
-        h="auto"
-        borderWidth={7}
-        borderStyle="solid"
-      />
-      {/* <Image src={Logo} />  */}
-      <Flex pos="fixed" top="1rem" right="1rem">
-        {/* <div className={classes.main}>
+         {/* <Image src={Logo} />  */}
+         <Flex
+                pos="fixed"
+                top="1rem"
+                right="1rem"
+                >
+                      {/* <div className={classes.main}>
        <div className={classes.container}>
       <div className={classes.wrapper}>
            <Image src={Logo} />
@@ -87,10 +91,17 @@ const Navbar = () => {
          </div>
        </div>
        </div> */}
-        <Flex>
-          <NextLink href="/vapes" passHref>
-            <Button as="a" variant="ghost" aria-label="Vapes" my={5} w="100%">
-              Vapes
+                    
+                  
+        <NextLink href="/vapes" passHref>
+            <Button 
+            as="a"
+            variant="ghost"
+            aria-label="Vapes"
+            my={5}
+            w="100%"
+            >
+                Vapes
             </Button>
           </NextLink>
           <NextLink href="/accessories" passHref>
@@ -124,19 +135,37 @@ const Navbar = () => {
             <Button as="a" variant="ghost" aria-label="Login" my={5} w="100%">
               Login
             </Button>
-          </NextLink>
-        </Flex>
-      </Flex>
-      <Switch
+        </NextLink>
+        <NextLink href="/users/1" passHref>
+            <Button 
+            as="a"
+            variant="ghost"
+            aria-label="Login"
+            my={5}
+            w="100%"
+            >
+                Login
+            </Button>
+        </NextLink>
+                    
+                </Flex>
+                <Flex pos="relative">
+        <Switch 
         pos="fixed"
-        top="1rem"
+        top="0.5"
+        bottom="2.0"
         right="1rem"
         color="blue"
         isChecked={isDark}
         onChange={toggleColorMode}
-      />
-    </Flex>
-  );
+        />
+        </Flex>
+        </Flex>
+        
+        
+        
+       
+    )
   // );
 };
 
