@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Vape } from 'src/model/vape';
-import { FlavorService } from 'src/shared/flavor.service';
+import { Vape } from '../model/vape';
 import { VapeController } from './vape.controller';
 import { VapeService } from './vape.service';
 

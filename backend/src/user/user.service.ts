@@ -8,22 +8,19 @@ import { InjectRepository } from '@nestjs/typeorm';
 export class UserService extends SharedService {
   users: any;
   constructor(
-
-
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
-    
   ) {
     super(userRepository);
   }
 
   // private users = User;
 
-  public  getUserById(id: number) {
-    const user = this.users.find((user: { id: number; }) => user.id === id);
-    if(user) {
+  public getUserById(id: number) {
+    const user = this.users.find((user: { id: number }) => user.id === id);
+    if (user) {
       throw new HttpException('User Not Found', 404);
     }
-      return user
+    return user;
   }
 }

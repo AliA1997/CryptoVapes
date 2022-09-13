@@ -1,5 +1,5 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import { Flavor } from 'src/model/flavor';
+import { Flavor } from '../model/flavor';
 import { Repository } from 'typeorm';
 import { SharedService } from './shared.service';
 
