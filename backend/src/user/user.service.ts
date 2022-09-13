@@ -1,29 +1,18 @@
 import { Injectable, HttpException } from '@nestjs/common';
-import { User } from '../model/user';
-import { SharedService } from '../shared/shared.service';
-import { getCustomRepository, Repository, UpdateResult } from 'typeorm';
-import { InjectRepository } from '@nestjs/typeorm';
+
+import { USERS } from './users.mock';
 
 @Injectable()
-export class UserService extends SharedService {
-  users: any;
-  constructor(
-
-
-    @InjectRepository(User)
-    private readonly userRepository: Repository<User>,
+export class UserService {
+  findOne(arg0: { email: string; }) {
+    throw new Error('Method not implemented.');
+  }   
+  private users = USERS;
+  public  async getUsers() {
+    return 
+      this.users;
     
-  ) {
-    super(userRepository);
   }
 
-  // private users = User;
-
-  public  getUserById(id: number) {
-    const user = this.users.find((user: { id: number; }) => user.id === id);
-    if(user) {
-      throw new HttpException('User Not Found', 404);
-    }
-      return user
   }
-}
+
