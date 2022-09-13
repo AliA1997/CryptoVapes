@@ -8,10 +8,10 @@ import { WalletType } from './model/walletType';
 import { Wallet } from './model/wallet';
 import { Flavor } from './model/flavor';
 import { Vape } from './model/vape';
-import { isAuthenticated } from './app.middleware';
+// import { isAuthenticated } from './app.middleware';
 import { UserModule } from './user/user.module';
 import { VapeModule } from './vape/vape.module';
-import { AuthModule } from './auth/auth.module';
+// import { AuthModule } from './auth/auth.module';
 import { AccessoriesModule } from './accessories/accessories.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 //Let nestjs know that the wallets and users exits
@@ -30,7 +30,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     }),
     UserModule,
     VapeModule,
-    AuthModule,
+    // AuthModule,
     AccessoriesModule,
   ],
   controllers: [AppController],
@@ -39,8 +39,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
-      .apply(isAuthenticated)
-      .exclude({ path: 'api/v1/user/:id', method: RequestMethod.GET })
-      .forRoutes(AppController);
+      // .apply(isAuthenticated)
+      // .exclude({ path: 'api/v1/user/:id', method: RequestMethod.GET })
+      // .forRoutes(AppController);
   }
 }
