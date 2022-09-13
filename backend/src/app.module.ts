@@ -8,10 +8,10 @@ import { User } from './model/user';
 // import { Wallet } from './model/wallet';
 import { Flavor } from './model/flavor';
 import { Vape } from './model/vape';
-import { isAuthenticated } from './app.middleware';
+// import { isAuthenticated } from './app.middleware';
 import { UserModule } from './user/user.module';
 import { VapeModule } from './vape/vape.module';
-import { AuthModule } from './auth/auth.module';
+// import { AuthModule } from './auth/auth.module';
 import { AccessoriesModule } from './accessories/accessories.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SharedModule } from './shared/shared.module';
@@ -32,7 +32,7 @@ import { SharedModule } from './shared/shared.module';
     }),
     UserModule,
     VapeModule,
-    AuthModule,
+    // AuthModule,
     AccessoriesModule,
     SharedModule,
   ],
@@ -42,8 +42,8 @@ import { SharedModule } from './shared/shared.module';
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
-      .apply(isAuthenticated)
-      .exclude({ path: 'api/v1/user/:id', method: RequestMethod.GET })
-      .forRoutes(AppController);
+      // .apply(isAuthenticated)
+      // .exclude({ path: 'api/v1/user/:id', method: RequestMethod.GET })
+      // .forRoutes(AppController);
   }
 }
