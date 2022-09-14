@@ -26,7 +26,7 @@ nav{
   padding: 16px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: red;
 }
 .nav__menu-bar{
   display: flex;
@@ -51,7 +51,7 @@ nav{
   padding: 24px 16px;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: #f1f1f1;
+  background-color: #640c0c;
 }
 .nav__menu-list.active{
   right: 0;
@@ -75,7 +75,7 @@ nav{
     display: none;
   }
   .nav__menu-list{
-    position: unset;
+    position: relative;
     flex-direction: row;
     min-height: fit-content;
     width: fit-content;
@@ -84,7 +84,7 @@ nav{
   }
   .nav__link::before{
     content: '';
-    position: absolute;
+    position: relative;
     width: 0%;
     height: 6px;
     bottom: -16px;

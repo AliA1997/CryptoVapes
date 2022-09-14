@@ -22,7 +22,14 @@ function MyApp({ Component, pageProps}) {
           </Head>
           <Navbar />
           <Box w="100%" padding="10vw">
+
+            <Provider store={store}>
+            
             <Component {...pageProps} />
+            </Provider>
+            {/* <Provider>
+              {<LoginOne />}
+            </Provider> */}
           </Box>
         </ChakraProvider>
   ); 
