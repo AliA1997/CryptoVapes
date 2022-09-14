@@ -1,4 +1,5 @@
 import { Exclude } from 'class-transformer';
+import moment from 'moment';
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
@@ -34,7 +35,4 @@ export class User {
   @Exclude()
   @Column()
   password: string;
-
-  @Column({ default: Date.now() })
-  createdDate: Date;
 }

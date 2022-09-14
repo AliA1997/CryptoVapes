@@ -1,22 +1,23 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from 'src/app.module';
-import { Flavor } from 'src/model/flavor';
-import { FlavorService } from 'src/shared/flavor.service';
-import { VapeService } from 'src/vape/vape.service';
-import vapeData from '../shared/vapeData.json';
+import { AppModule } from '../app.module';
+import { Flavor } from '../model/flavor';
+import { FlavorService } from '../shared/flavor.service';
+import { VapeService } from '../vape/vape.service';
+import * as vapeData from '../shared/vapeData.json';
 
 (async () => {
   const app = await NestFactory.createApplicationContext(AppModule);
   const flavorService = app.get(FlavorService);
   const vapeService = app.get(VapeService);
   const flavors = await flavorService.find({});
-  for (let i = 0; i < vapeData.length; i++) {
-    const vape = vapeData[i];
+  for (let i = 0; i < vapeData.data.length; i++) {
+    const vape = vapeData.data[i];
     const flavor = flavors.find((flav: Flavor) =>
       vape.name.includes(flav.name),
     );
     await vapeService.save({
       ...vape,
+      thumbnail: flavor.thumbnail,
       flavor: flavor.id,
     });
   }

@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format": "prettier --write \"../**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -18,7 +18,9 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "seed:vapes": "ts-node src/commands/vape.seeder.ts",
+    "seed:flavors": "ts-node src/commands/flavor.seeder.ts"
   },
   "dependencies": {
     "@nestjs-modules/mailer": "^1.6.0",
@@ -31,6 +33,7 @@
     "@nestjs/typeorm": "^7.1.5",
     "@types/bcryptjs": "^2.4.2",
     "@types/faker": "^5.5.3",
+    "@types/moment": "^2.13.0",
     "@types/redis": "^2.8.28",
     "@types/stripe": "^8.0.417",
     "bcryptjs": "^2.4.3",
@@ -40,6 +43,7 @@
     "class-validator": "^0.13.1",
     "cookie-parser": "^1.4.5",
     "faker": "^5.5.3",
+    "moment": "^2.29.4",
     "mysql2": "^2.2.5",
     "nestjs-stripe": "^0.4.1",
     "nodemailer": "^6.6.0",
@@ -72,7 +76,7 @@
     "supertest": "^6.0.0",
     "ts-jest": "^26.4.3",
     "ts-loader": "^8.0.8",
-    "ts-node": "^9.0.0",
+    "ts-node": "^10.8.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.0.5"
   },

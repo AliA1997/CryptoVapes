@@ -1,36 +1,19 @@
 import { Injectable, HttpException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { SharedService } from 'src/shared/shared.service';
+import { Repository } from 'typeorm';
 import { CreateUserDto } from './dto/create-user.dto';
+import { User } from './entities/user.enitie';
 
 // import { USERS } from './users.mock';
 
 @Injectable()
-export class UserService {
-  
-  private users: any = [{ id: 0, name: 'MothePro'}];
-
-  findAll(){
-    return this.users;
+export class UserService extends SharedService {
+  users: any;
+  constructor(
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>,
+  ) {
+    super(userRepository);
   }
-
-  findById(userId: number){
-    return this.users.find(user => user.id === userId);
-
-  }
-
-
-  createUser(createUserDto: CreateUserDto){
-    const newUser = {
-      id: Date.now(), ...createUserDto
-    };
-
-    this.users.push(newUser);
-  }
-
-  public  async getUsers() {
-    return 
-      this.users;
-    
-  }
-
-  }
-
+}

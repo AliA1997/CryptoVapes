@@ -1,62 +1,64 @@
-[
+{
+  "data": [
     {
-        "name": "Pineapple Custard Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863650/hcow_vapes_11.jpg"
+      "name": "Pineapple Custard Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863650/hcow_vapes_11.jpg"
     },
     {
-        "name": "Blue Razz Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_9.webp"
+      "name": "Blue Razz Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_9.webp"
     },
     {
-        "name": "Tangerine Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_12.webp"
+      "name": "Tangerine Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_12.webp"
     },
     {
-        "name": "Strawberry Kiwi",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_13.jpg"
+      "name": "Strawberry Kiwi",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_13.jpg"
     },
     {
-        "name": "Strawberry Lychee",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_7.jpg"
+      "name": "Strawberry Lychee",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_7.jpg"
     },
     {
-        "name": "Cool Mint",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_8.webp"
+      "name": "Cool Mint",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_8.webp"
     },
     {
-        "name": "Purple Rain",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_17.webp"
+      "name": "Purple Rain",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_17.webp"
     },
     {
-        "name": "Blueberry Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_5.jpg"
+      "name": "Blueberry Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_5.jpg"
     },
     {
-        "name": "Mango Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_6.jpg"
+      "name": "Mango Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_6.jpg"
     },
     {
-        "name": "Energy Drink",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vape_3.jpg"
+      "name": "Energy Drink",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vape_3.jpg"
     },
     {
-        "name": "Grape Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_4.jpg"
+      "name": "Grape Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_4.jpg"
     },
     {
-        "name": "Cranberry Lemonade",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_2.jpg"
+      "name": "Cranberry Lemonade",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662863651/hcow_vapes_2.jpg"
     },
     {
-        "name": "Kiwi Passion Fruit Guava",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_18.webp"
+      "name": "Kiwi Passion Fruit Guava",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_18.webp"
     },
     {
-        "name": "Melon Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_16.webp"
+      "name": "Melon Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_16.webp"
     },
     {
-        "name": "Peach Ice",
-        "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_14.webp"
+      "name": "Peach Ice",
+      "thumbnail": "https://res.cloudinary.com/aa1997/image/upload/v1662864529/hcow_vapes_14.webp"
     }
-]
+  ]
+}

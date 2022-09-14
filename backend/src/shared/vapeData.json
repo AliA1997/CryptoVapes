@@ -1,137 +1,139 @@
-[
+{
+  "data": [
     {
-        "name": "HCOW MCOW Pineapple Custard Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Pineapple Custard Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Blue Razz Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Blue Razz Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Tangerine Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 9.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Tangerine Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 9.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Strawberry Kiwi 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 9.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Strawberry Kiwi 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 9.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Strawberry Lychee 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Strawberry Lychee 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Cool Mint 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 7.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Cool Mint 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 7.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Purple Rain 6000 Puffs",
-        "customEthereumPrice": 0.0004,
-        "customBitcoinPrice": 0.000038,
-        "customUsdcPrice": 4.99,
-        "price": 7.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Purple Rain 6000 Puffs",
+      "customEthereumPrice": 0.0004,
+      "customBitcoinPrice": 0.000038,
+      "customUsdcPrice": 4.99,
+      "price": 7.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Blueberry Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 7.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Blueberry Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 7.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Mango Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 7.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Mango Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 7.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Energy Drink 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Energy Drink 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Grape Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Grape Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Cranberry Lemonade 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Cranberry Lemonade 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Kiwi Passion Fruit Guava 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Kiwi Passion Fruit Guava 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Melon Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Melon Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     },
     {
-        "name": "HCOW MCOW Peach Ice 6000 Puffs",
-        "customEthereumPrice": 0.00057,
-        "customBitcoinPrice": 0.000046,
-        "customUsdcPrice": 7.99,
-        "price": 8.99,
-        "clearancePrice": null,
-        "clearanceDate": null
+      "name": "HCOW MCOW Peach Ice 6000 Puffs",
+      "customEthereumPrice": 0.00057,
+      "customBitcoinPrice": 0.000046,
+      "customUsdcPrice": 7.99,
+      "price": 8.99,
+      "clearancePrice": null,
+      "clearanceDate": null
     }
-]
+  ]
+}

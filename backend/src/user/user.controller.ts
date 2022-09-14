@@ -5,26 +5,21 @@ import { User } from './entities/user.enitie';
 
 @Controller('user')
 export class UserController {
-  constructor (private userService: UserService) {
+  constructor(private userService: UserService) {}
+
+  @Get()
+  async getUsers(options): Promise<User[]> {
+    return await this.userService.find(options);
   }
 
-   @Get()
-   getUsers(): User[] {
-    return this.userService.findAll()
-   }
-
-   @Get(':id')
-   getUserById(@Param('id') id: string): User {
-      return this.userService.findById(Number(id));
-   }
-
+  @Get(':id')
+  async getUserById(@Param('id') id: string): Promise<User> {
+    return await this.userService.findOne(Number(id));
+  }
 
   //  @Post()
   //  createUser(@Body() body: CreateUserDto): User {
   //   return this.userService.createUser(body);
 
   //  }
-
-  
-    
 }

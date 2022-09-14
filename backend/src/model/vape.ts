@@ -9,7 +9,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity()
+@Entity('vapes')
 export class Vape {
   @PrimaryGeneratedColumn()
   id: number;
@@ -20,19 +20,19 @@ export class Vape {
   @Column()
   thumbnail: string;
 
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'decimal' })
   customEthereumPrice: number;
 
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'decimal' })
   customBitcoinPrice: number;
 
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'decimal' })
   customUsdcPrice: number;
 
-  @Column({ nullable: false })
+  @Column({ nullable: false, type: 'decimal' })
   price: number;
 
-  @Column({ nullable: true })
+  @Column({ nullable: true, type: 'decimal' })
   clearancePrice: number;
 
   @Column({ nullable: true })
