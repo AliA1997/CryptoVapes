@@ -55,7 +55,7 @@ const Navbar = () => {
   const isDark = colorMode === "dark";
 
   return (
-    <Flex pos="relative" right="-0.01rem" >
+    <Flex pos="relative" right="-0.01rem" zIndex={9999} position="fixed" top="1vh" left="0">
       {/* <Flex> */}
       {/* <NextImage
         pos="relative"
@@ -78,7 +78,7 @@ const Navbar = () => {
 
       {/* <Image src={Logo} />  */}
       {/* <Flex pos="relative" top=".7rem" right=".1rem"> */}
-        {/* <div className={classes.main}>
+      {/* <div className={classes.main}>
        <div className={classes.container}>
       <div className={classes.wrapper}>
            <Image src={Logo} />
@@ -90,7 +90,7 @@ const Navbar = () => {
          </div>
        </div>
        </div> */}
-<NextImage
+      <NextImage
         pos="relative"
         src={Logo}
         width={180}
@@ -106,15 +106,23 @@ const Navbar = () => {
         layout="intrinsic"
       />
 
-<Flex pos="relative" top="-.35rem" right="-29rem" height="55%">
-        <NextLink href="/vapes" passHref  >
-          <Button position="right" as="a" variant="ghost" aria-label="Vapes" my={5} w="100%" objectPosition="absolute">
+      <Flex pos="relative" top="-.35rem" right="-29rem" height="55%">
+        <NextLink href="/vapes" passHref>
+          <Button
+            position="right"
+            as="a"
+            variant="ghost"
+            aria-label="Vapes"
+            my={5}
+            w="100%"
+            objectPosition="absolute"
+          >
             Vapes
           </Button>
         </NextLink>
         <NextLink href="/accessories" passHref>
           <Button
-          position="right"
+            position="right"
             as="a"
             variant="ghost"
             aria-label="Accessories"
@@ -125,23 +133,42 @@ const Navbar = () => {
           </Button>
         </NextLink>
         <NextLink href="/account" passHref>
-          <Button position="right" as="a" variant="ghost" aria-label="Account" my={5} w="100%">
+          <Button
+            position="right"
+            as="a"
+            variant="ghost"
+            aria-label="Account"
+            my={5}
+            w="100%"
+          >
             Account
           </Button>
         </NextLink>
         <NextLink href="/register" passHref>
-          <Button as="a" position="right" variant="ghost" aria-label="Register" my={5} w="100%">
+          <Button
+            as="a"
+            position="right"
+            variant="ghost"
+            aria-label="Register"
+            my={5}
+            w="100%"
+          >
             Register
           </Button>
         </NextLink>
         <NextLink href="/users/1" passHref>
-          <Button as="a" position="right" variant="ghost" aria-label="Login" my={5} w="100%">
+          <Button
+            as="a"
+            position="right"
+            variant="ghost"
+            aria-label="Login"
+            my={5}
+            w="100%"
+          >
             Login
           </Button>
         </NextLink>
-        
       </Flex>
-      
     </Flex>
   );
   // );

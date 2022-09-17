@@ -1,50 +1,26 @@
-import TopBar from "../components/TopBar";
-// import styles from '../styles/Home.module.css'
-import Navbar from "../components/Navbar";
-import LoginOne from "./users/[id]";
-import Vapes from "../components/Vapes";
-import { Image } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+
+import { Box, Flex, Image, Stack, VStack } from "@chakra-ui/react";
+
 import {
   CryptoVapesRouteContainer,
   CryptoVapesResponsveRow,
+  CryptoVapesDisplayVapesForSale,
 } from "../components/Containers";
-import { CryptoVapesText } from "../components/Typography";
-import { useEffect, useState } from "react";
-// import InitialPaneImg1 from "../assets/initial-pane-img-1.svg";
-// import InitialPaneImg2 from "../assets/initial-pane-img-2.svg";
-
-const MarketingPaneText = ({ children }) => (
-  <CryptoVapesText chakraUIStyles={{ fontSize: "4em" }}>
-    {children}
-  </CryptoVapesText>
-);
-const MarketingPaneImg = ({ src, alt }) => (
-  <Image src={src} alt={alt} w="20%" h="20vw" />
-);
-const MarketingPane = ({ image, text }) => (
-  <CryptoVapesResponsveRow
-    chakraUIProps={{
-      borderRadius: "1.5em",
-      backgroundColor: "gray.100",
-      fontWeight: "bolder",
-    }}
-  >
-    <MarketingPaneText>{text}</MarketingPaneText>
-    <MarketingPaneImg src={image} alt={text} />
-  </CryptoVapesResponsveRow>
-);
+import {
+  CryptoVapesPaneTitleText,
+  CryptoVapesPaneSubtitleText,
+  CryptoVapesText,
+} from "../components/Typography";
+import { vapes } from "../constants/sample-data";
 
 /** LOOK AT THE CODING GUIDELINES on how to create pages. */
 export default function Home() {
   const [newestVapes, setNewestVapes] = useState([]);
   const [popularVapes, setPopularVapes] = useState([]);
   useEffect(() => {
-    async function getNewestVapes() {
-      
-    }
-    async function getPopularVapes() {
-
-    }
+    async function getNewestVapes() {}
+    async function getPopularVapes() {}
 
     getNewestVapes();
     getPopularVapes();
@@ -52,11 +28,90 @@ export default function Home() {
 
   return (
     <CryptoVapesRouteContainer>
-      <Image src="images/initial-pane-img-1.svg" w="100vw" h="80vh" />
-      <MarketingPane
-        image="images/initial-pane-img-2.svg"
-        text="For the sophicated and beautiful."
+      <Box id="container-fluid" height="80vh" width="100%">
+        <Box id="background">
+          <Box className="cube-entity vape"></Box>
+          <Box className="cube-entity accessory"></Box>
+          <Box className="cube-entity vape"></Box>
+          <Box className="cube-entity accessory"></Box>
+          <Box className="cube-entity vape"></Box>
+          <Box className="cube-entity accessory"></Box>
+          <Box className="cube-entity vape"></Box>
+          <Box className="cube-entity accessory"></Box>
+          <Box className="cube-entity vape"></Box>
+          <Box className="cube-entity accessory"></Box>
+          <Box className="cube-entity vape"></Box>
+        </Box>
+        <Box position="absolute" top="35vh" w="100%">
+          <CryptoVapesText
+            marginX="auto"
+            textAlign="center"
+            fontSize="2.5em"
+            fontWeight="900"
+          >
+            Welcome to CryptoVapes
+          </CryptoVapesText>
+          <CryptoVapesText
+            marginX="auto"
+            textAlign="center"
+            fontSize="1.75em"
+            fontWeight="400"
+          >
+            Buy vapes with your crypto or fiat currency.
+          </CryptoVapesText>
+        </Box>
+      </Box>
+      <CryptoVapesDisplayVapesForSale title="Newest Vapes" vapes={vapes} />
+      <Flex
+        alignItems="center"
+        justifyContent="space-between"
+        minHeight="80vh"
+        w="100%"
+        paddingY="2vw"
+        paddingX="10vw"
+      >
+        <Image
+          src="https://res.cloudinary.com/aa1997/image/upload/v1663440531/bitcoin-pane-1.svg"
+          alt="Bitcoin Pane 1"
+          h="90%"
+          w="50%"
+        />
+        <VStack textAlign="center">
+          <CryptoVapesPaneTitleText>
+            Purchase vapes wholesale
+          </CryptoVapesPaneTitleText>
+          <CryptoVapesPaneSubtitleText>
+            Use crypto for real merchandise.
+          </CryptoVapesPaneSubtitleText>
+        </VStack>
+      </Flex>
+      <CryptoVapesDisplayVapesForSale
+        title="Most Popular Vapes"
+        vapes={popularVapes}
       />
+      <Flex
+        alignItems="center"
+        justifyContent="space-between"
+        minHeight="80vh"
+        w="100%"
+        paddingY="2vw"
+        paddingX="10vw"
+      >
+        <Image
+          src="https://res.cloudinary.com/aa1997/image/upload/v1663441772/crypto-pane-2.svg"
+          alt="Bitcoin Pane 1"
+          h="90%"
+          w="50%"
+        />
+        <VStack textAlign="center">
+          <CryptoVapesPaneTitleText>
+            Invested crypto for goods
+          </CryptoVapesPaneTitleText>
+          <CryptoVapesPaneSubtitleText>
+            Use ethereum, bitcoin and usdc for vapes and vape accessories.
+          </CryptoVapesPaneSubtitleText>
+        </VStack>
+      </Flex>
     </CryptoVapesRouteContainer>
   );
 }
